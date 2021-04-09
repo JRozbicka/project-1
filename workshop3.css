@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200&family=Pangolin&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'pangolin', sans-serif;
+}
+
+nav {
+    margin: 30px auto;
+    max-width: 1440px;
+    text-align: right;
+
+
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    color: gray;
+    padding: 10px;
+    margin: 0 20px;
+
+
+
+
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+
+}
+
+a.reservation {
+    padding: 10px 30px;
+    font-size: 2.2rem;
+    border: 2px solid pink;
+    letter-spacing: 1px;
+    margin-right: 50px;
+    margin-left: 80px;
+
+    transition: 2s;
+
+}
+
+nav a.reservation:hover {
+    background-color: royalblue;
+    color: #eee;
+    border-left-color: royalblue;
+
+}
+
+
+header {
+    height: 40vh;
+    background-image: url(fantasy.jpg);
+    background-size: cover;
+
+
+}
+
+header h1 {
+    font-size: 6rem;
+    color: black;
+    text-align: center;
+    line-height: 40vh;
+    background-color: rgba(0, 0, 0, 10%);
+}
+
+main {
+    max-width: 1440px;
+    margin: 5vh auto;
+    font-size:  0px;
+
+}
+
+main p.description {
+    font-size 2.2rem;
+    text-align: center;
+    margin: 0 30px 50px 30px;
+    line-height: 270%;
+
+}
+
+main div.feature {
+    display: inline-block;
+    width: 33.33%;
+
+}
+main div.image {
+    height: 200px;
+    background-color: aqua;
+    margin: 20px 30px;
+}
+
+main h2 {
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+footer {
+    background-color: #000;
+
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
