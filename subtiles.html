@@ -5,71 +5,119 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Document</title>
+ <title>Slider</title>
  <style>
   * {
    margin: 0;
    padding: 0;
   }
 
-  section {
+  header {
+   height: 600px;
+   position: relative;
+   overflow: hidden;
+  }
+
+  img {
    position: absolute;
-   width: 80%;
-   height: 30vh;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: royalblue;
-   color: white;
-   overflow: hidden;
+   min-width: 100%;
+   min-height: 100%;
+   opacity: 0;
+   animation: slider 15s infinite linear;
+  }
+
+  img:nth-child(2) {
+   animation-delay: 5s;
+  }
+
+  img:nth-child(3) {
+   animation-delay: 10s;
   }
 
   h1 {
    position: absolute;
-   top: 50%;
-   left: 0;
-   width: 100%;
-   transform: translate(0, -50%);
-   text-align: center;
    font-size: 60px;
-   text-transform: uppercase;
-   font-family: open sans, sans-serif;
-   animation: text 15s linear infinite both;
-   color: black;
+   background-color: rgba(0, 0, 0, 0.6);
+   font-family: 'open sans', sans-serif;
+   color: white;
+   padding: 20px 60px;
+   animation: txt 15s linear infinite both;
+   opacity: 0;
+
   }
 
-  h1:nth-child(2) {
+  h1:nth-of-type(1) {
+   top: 30%;
+   right: 20%;
+  }
+
+  h1:nth-of-type(2) {
+   bottom: 10%;
+   left: 10%;
    animation-delay: 5s;
   }
 
-  h1:nth-child(3) {
+  h1:nth-of-type(3) {
+   top: 10%;
+   left: 35%;
    animation-delay: 10s;
   }
 
-
-  @keyframes text {
+  @keyframes txt {
    0% {
-    transform: translate(100%, -50%)
-   }
-   3% {
-    transform: translate(100%, -50%)
+    opacity: 0;
    }
 
-   6% {
-    transform: translate(0, -50%);
+   5% {
+    opacity: 0;
    }
 
-   30% {
-    transform: translate(0, -50%);
+   10% {
+    opacity: 1;
    }
 
-   33% {
-    transform: translate(-100%, -50%);
+   23.33% {
+    opacity: 1;
+   }
+
+   28.33% {
+    opacity: 0;
+   }
+
+   33.33% {
+    opacity: 0
    }
 
    100% {
-    transform: translate(-100%, -50%);
+    opacity: 0;
    }
+
+
+  }
+
+  @keyframes slider {
+   0% {
+    opacity: 0;
+   }
+   5% {
+    opacity: 1
+   }
+   33.33% {
+    opacity: 1
+   }
+
+   38.33% {
+    opacity: 0;
+   }
+
+   100% {
+    opacity: 0;
+   }
+
+
 
   }
  </style>
@@ -77,11 +125,14 @@
 </head>
 
 <body>
- <section>
-  <h1>tanio</h1>
-  <h1>szybko</h1>
-  <h1>średnio</h1>
- </section>
+ <header>
+  <img src="pic1.jpg" alt="">
+  <img src="pic2.jpg" alt="">
+  <img src="pic3.jpg" alt="">
+  <h1>Japonia</h1>
+  <h1>Polska</h1>
+  <h1>Kanada</h1>
+ </header>
 </body>
 
 </html>
